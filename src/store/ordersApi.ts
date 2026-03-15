@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:4000/api",
+  baseUrl: "https://elvevier-backend-production.up.railway.app/api",
   prepareHeaders: (headers) => {
     const token =
       typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
