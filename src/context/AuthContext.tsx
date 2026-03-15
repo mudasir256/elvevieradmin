@@ -35,7 +35,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setIsLoading(false);
       return;
     }
-    fetch("http://localhost:4000/api/admin/me", {
+    fetch("https://elvevier-backend-production.up.railway.app/api/admin/me", {
       headers: { Authorization: `Bearer ${saved}` },
     })
       .then((r) => {
@@ -54,7 +54,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = useCallback(async (email: string, password: string) => {
     try {
-      const res = await fetch("http://localhost:4000/api/admin/login", {
+      const res = await fetch("https://elvevier-backend-production.up.railway.app/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

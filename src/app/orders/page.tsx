@@ -91,7 +91,7 @@ export default function OrdersPage() {
   const handleExport = () => {
     const params = new URLSearchParams();
     if (statusFilter !== "all") params.set("status", statusFilter);
-    window.open(`http://localhost:4000/api/orders/export?${params.toString()}`, "_blank");
+    window.open(`https://elvevier-backend-production.up.railway.app/api/orders/export?${params.toString()}`, "_blank");
   };
 
   return (
